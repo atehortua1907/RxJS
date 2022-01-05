@@ -12,7 +12,7 @@ console.log('Total arreglo', total);
 interval(1000).pipe(
     take(6), //toma las primeras cantidades de emisiones indicadas por parametro
     tap(console.log),
-    reduce(totalReducer)
+    reduce(totalReducer) //emite el valor cuando termina
 ).subscribe({
     next: val => console.log('next:', val),
     complete: () => console.log('completado')
